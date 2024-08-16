@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// <!-- Made By - Asmita Kumari -->
 
-function App() {
+import Footer from "./Components/Footer";
+import Home from "./Components/Home";
+import Krisshaks from "./Components/Krisshaks";
+import Manage from "./Components/Manage";
+import Navigation from "./Components/Navigation";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    
+    <BrowserRouter>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/krisshaks" element={<Krisshaks/>}/>
+        <Route path="/manage" element={<Manage/>}/>
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
+    </>
   );
 }
-
-export default App;
