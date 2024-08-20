@@ -7,7 +7,7 @@
 
 ## Description
 
-Hello Everyone, I am ASMITA KUMARI ,a young learner and i am here with frontend part of my project called "E-Krisshak" , A farmer availability management system that helps to find a farmer for your field with their proper and detailed Personal, Professional and Contact information that helps you to choose them according to your requirements. I am making this project with the intension of helping the land-owners that can't find farmer for their field and many farmers that are seeking for work ,especially in INDIA.
+Hello Everyone, I am ASMITA KUMARI , a young learner and i am here with frontend part of my project called "E-Krisshak" , A farmer availability management system that helps to find a farmer for your field with their proper and detailed Personal, Professional and Contact information that helps you to choose them according to your requirements. I am making this project with the intension of helping the land-owners that can't find farmer for their field and many farmers that are seeking for work ,especially in INDIA.
 
 
 This project is a React-based full-stack CRUD(Create, Read, Update, Delete) Web Application that interfaces with a Django backend and uses a MySQL database for persistent data storage with. The frontend communicates with the backend via RESTful APIs. This README outlines how to set up the project, its main functionalities, and steps for deployment of frontend of this project.
