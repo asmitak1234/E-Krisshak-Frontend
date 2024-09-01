@@ -17,7 +17,7 @@ export default function Navigation({ formContent })
 {
     return(
       <>
-        <Navbar className="navbar my-1" expand="lg" bg="dark" data-bs-theme="dark">
+        <Navbar className="mb-5" expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/" className="app-logo">
             <img
