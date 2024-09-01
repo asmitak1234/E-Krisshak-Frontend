@@ -1,7 +1,7 @@
 // <!-- Made By - Asmita Kumari -->
 
 import React from "react"
-import {Navbar} from "react-bootstrap"
+import {Navbar,Container} from "react-bootstrap"
 import logo from "../static/e-krisshak app-logo.jpg"
 import '../App.css'
 import {
@@ -13,25 +13,36 @@ import {
 } from 'cdbreact';
 import { Link } from "react-router-dom";
 
-export default function Navigation()
+export default function Navigation({ formContent })
 {
     return(
       <>
-        <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="my-1">
+        <Navbar className="navbar my-1" expand="lg" bg="dark" data-bs-theme="dark">
+        <Container>
           <Navbar.Brand href="/" className="app-logo">
             <img
-              alt="E-Krisshak"
+              alt="E-Krisshak"    
               src={logo}
               width="53"
               height="55"
-              className="d-inline-block align-center"
+              className="d-inline-block align-middle"
             />{' '}
-            <strong>E-Krisshak</strong>
-            <span style={{position:'fixed',right:"20px"}}>Asmita Kumari</span>
+            <strong className="mx-1">E-Krisshak</strong>
+            {/* <span style={{position:'fixed', right:"4px", top:"40px", fontSize:"8px",}}>Asmita Kumari</span> */}
           </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                    <Navbar.Text>
+                        <form className="my-2 d-inline" style={{display:"inline",}} onSubmit={e => formContent.onSubmit(e)}>
+                            {formContent.content}
+                        </form>
+                    </Navbar.Text>
+                </Navbar.Collapse>
+        </Container>
         </Navbar>
 
-      <div className="sidebar">
+
+      {/* <div className="sidebar">
       <CDBSidebar backgroundColor="#333">
       <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>Navigation</CDBSidebarHeader>
       <CDBSidebarContent>
@@ -49,7 +60,7 @@ export default function Navigation()
         </CDBSidebarMenu>
       </CDBSidebarContent>
       </CDBSidebar>
-      </div>
+      </div> */}
       </>
     );
 }

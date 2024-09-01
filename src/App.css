@@ -8,11 +8,22 @@ body ,html{
 
 .app-logo{
     padding-left: 50px;
+    display: flex;
+    align-items: center;
 }
 
+.navbar-text form {
+    display: inline;
+  }
+
+.navbar {
+    width: 100vw;
+  }
+  
 .sidebar{
     display: flex;
     height: 100vh;
+    width: 20vw;
     float: left;
     overflow: scroll initial;
 }

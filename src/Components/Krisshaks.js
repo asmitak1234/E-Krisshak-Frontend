@@ -19,7 +19,7 @@ export default function Krisshaks(){
     },[]);
     
     return(
-        <div className='row side-row'>
+        <div className='row side-row mx-2'>
         <Table striped bordered hover>
         <thead>
           <tr>

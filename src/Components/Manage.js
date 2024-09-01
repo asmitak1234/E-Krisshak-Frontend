@@ -48,8 +48,8 @@ export default function Manage(){
            if(window.confirm('Are you sure ?')){
                e.preventDefault();
                deleteKrisshak(krisshakId)
-               .then((result)=>{
-                   alert(result);
+               .then(()=>{
+                   alert("Krisshak Deleted Successfully");
                    setIsUpdated(true);
                },
                (error)=>{
@@ -62,7 +62,7 @@ export default function Manage(){
        let EditModalClose=()=>setEditModalShow(false);
    
     return(
-        <div className='row side-row my-4'>
+        <div className='row side-row my-4 mx-2'>
         <Table striped bordered hover>
         <thead>
           <tr>
