@@ -145,7 +145,7 @@ This React frontend project is deployed on Vercel. Follow the steps below to dep
    4. *Deploy Your Project*:
 
       - Click on the "Deploy" button.
-      -  Vercel will build and deploy your project. You can monitor the deployment progress on the Vercel dashboard.
+      - Vercel will build and deploy your project. You can monitor the deployment progress on the Vercel dashboard.
       - Once the deployment is complete, you will receive a live URL where your frontend application is accessible.
 
    5. *Continuous Deployment*:

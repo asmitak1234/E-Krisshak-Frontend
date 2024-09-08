@@ -10,27 +10,27 @@ export default function Navigation({ formContent })
     return(
       <>
         <Navbar className="mb-2" expand="lg" bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="/" className="app-logo">
-            <img
-              alt="E-Krisshak"    
-              src={logo}
-              width="53"
-              height="55"
-              className="d-inline-block align-middle"
-            />{' '}
-            <strong className="mx-1">E-Krisshak</strong>
-            {/* <span style={{position:'fixed', right:"4px", top:"40px", fontSize:"8px",}}>Asmita Kumari</span> */}
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-                    <Navbar.Text>
-                        <form className="my-2 d-inline" style={{display:"inline",}} onSubmit={e => formContent.onSubmit(e)}>
-                            {formContent.content}
-                        </form>
-                    </Navbar.Text>
-                </Navbar.Collapse>
-        </Container>
+          <Container>
+            <Navbar.Brand href="/" className="app-logo">
+              <img
+                alt="E-Krisshak"    
+                src={logo}
+                width="53"
+                height="55"
+                className="d-inline-block align-middle"
+              />{' '}
+              <strong className="mx-1">E-Krisshak</strong>
+              {/* <span style={{position:'fixed', right:"4px", top:"40px", fontSize:"8px",}}>Asmita Kumari</span> */}
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                  <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                      <Navbar.Text>
+                          <form className="my-2 d-inline" style={{display:"inline",}} onSubmit={e => formContent.onSubmit(e)}>
+                              {formContent.content}
+                          </form>
+                      </Navbar.Text>
+                  </Navbar.Collapse>
+          </Container>
         </Navbar>
 
 
