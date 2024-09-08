@@ -4,20 +4,12 @@ import React from "react"
 import {Navbar,Container} from "react-bootstrap"
 import logo from "../static/e-krisshak app-logo.jpg"
 import '../App.css'
-import {
-  CDBSidebar,
-  CDBSidebarHeader,
-  CDBSidebarMenuItem,
-  CDBSidebarContent,
-  CDBSidebarMenu,
-} from 'cdbreact';
-import { Link } from "react-router-dom";
 
 export default function Navigation({ formContent })
 {
     return(
       <>
-        <Navbar className="mb-5" expand="lg" bg="dark" variant="dark">
+        <Navbar className="mb-2" expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/" className="app-logo">
             <img

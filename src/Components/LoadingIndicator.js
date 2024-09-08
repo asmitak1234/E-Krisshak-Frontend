@@ -1,3 +1,5 @@
+// # <!-- Made By - Asmita Kumari -->
+
 import "../styles/LoadingIndicator.css"
 
 const LoadingIndicator = () => {

@@ -30,8 +30,8 @@ export default function Footer(){
             />
             {/* <span className="ms-4 h5 mb-0 font-weight-bold"></span> */}
           </div>
-          <strong style={{fontSize:'17px'}} className="mx-1">E-Krisshak</strong>
-          <p className="mx-1 my-4"> by Asmita Kumari</p>
+          <strong style={{fontSize:'23px'}} className="mx-1">E-Krisshak</strong>
+          <p className="mx-3 my-2"> by Asmita Kumari</p>
         </CDBBox>
       </CDBBox>
     </CDBModalFooter>

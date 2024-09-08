@@ -7,10 +7,9 @@
 
 ## Description
 
-Hello Everyone, I am ASMITA KUMARI , a young learner and i am here with frontend part of my project called "E-Krisshak" , A farmer availability management system that helps to find a farmer for your field with their proper and detailed Personal, Professional and Contact information that helps you to choose them according to your requirements. I am making this project with the intension of helping the land-owners that can't find farmer for their field and many farmers that are seeking for work ,especially in INDIA.
+Hello Everyone, I am ASMITA KUMARI , a young learner and i am here with frontend part of my project called "E-Krisshak" , A farmer availability management system that helps to select and find a farmer for your field with their proper and detailed Personal, Professional and Contact information that helps you to store and choose them according to your requirements.This is a Secure and Efficient WebApp and I am making this project with the intension of helping the land-owners that can't find farmer for their field and many farmers that are seeking for work ,especially in INDIA.
 
-
-This project is a React-based full-stack CRUD(Create, Read, Update, Delete) Web Application that interfaces with a Django backend and uses a MySQL database for persistent data storage with. The frontend communicates with the backend via RESTful APIs. This README outlines how to set up the project, its main functionalities, and steps for deployment of frontend of this project.
+This project is a React-based full-stack CRUD(Create, Read, Update, Delete) Web Application that interfaces with a Django backend and uses a MySQL Database for persistent data storage with. The frontend communicates with the backend via RESTful APIs. This README outlines how to set up the project, its main functionalities, and steps for deployment of frontend of this project.
 
 ## Table of Contents
 
@@ -109,76 +108,49 @@ Before setting up the React frontend, ensure the Django backend is properly conf
 - *User Interface*: A responsive and dynamic user interface built with React.
 - *API Integration*: Fetches and posts data to/from the Django backend using RESTful API endpoints.
 - *Form Handling*: User input and form submissions are handled with proper validation mechanisms.
-- *User Authentication*: Handles user authentication (login, signup) through API calls to the Django backend.
+- *User Authentication*: Handles user authentication (login, register) through API calls to the Django backend and gives alert to user.
 - *Navigation*: Users can navigate to different web pages(Home , List , Manage) through Side Navigation Bar.
 - *CRUD Operations*: Perform create, read, update, and delete operations on the main resources.
 
 ## Deployment
 
 ### Frontend Deployment
+This React frontend project is deployed on Vercel. Follow the steps below to deploy your frontend application:
 
-1. *Build the Production Version*
+#### Prerequisites
+   - Make sure you have a Vercel account. You can sign up at Vercel.
+   - Ensure your frontend code is pushed to a Git repository (GitHub, GitLab, or Bitbucket).
 
-   Run the following command to create a production build of the React app:
+#### Steps to Deploy
 
-   bash
-   npm run build  # or yarn build
-   
+   1. *Connect Your Repository*:
 
-   This will create a build directory with the static files ready for deployment.
+      - Log in to your Vercel dashboard.
+      - Click on the "New Project" button.
+      - Choose the Git provider where your frontend repository is hosted.
+      - Authorize Vercel to access your repository.
+      - Select the repository for your frontend project.
 
-2. *Serve the Static Files with Django*
+   2. *Configure Build Settings*:
 
-   - Copy the contents of the build directory to your Django project’s static files directory.
-   - Update your Django settings.py to serve static files. Ensure the following is configured:
+      - Vercel will automatically detect the framework and settings for React. If not, you can manually specify the build settings.
+      - For React, the default build command is npm run build or yarn build.
+      - The output directory is typically build for React projects.
 
-     python
-     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'path_to_build_directory')]
-     
+   3. *Environment Variables*:
 
-3. *Deploy with Gunicorn and Nginx*
+      - Add any necessary environment variables by navigating to the "Environment Variables" section in the Vercel project settings.
+      - Ensure you add variables like CORS_ALLOWED_ORIGINS to point to your Django backend API.
 
-   - *Install Gunicorn*:
+   4. *Deploy Your Project*:
 
-     bash
-     pip install gunicorn
-     
+      - Click on the "Deploy" button.
+      -  Vercel will build and deploy your project. You can monitor the deployment progress on the Vercel dashboard.
+      - Once the deployment is complete, you will receive a live URL where your frontend application is accessible.
 
-   - *Run Gunicorn*:
+   5. *Continuous Deployment*:
 
-     bash
-     gunicorn --bind 0.0.0.0:8000 my_project.wsgi
-     
+      - Whenever you push changes to the connected repository, Vercel will automatically rebuild and redeploy your frontend application.
+      - Ensure your branch is set up correctly to trigger deployments as needed.
 
-   - *Set Up Nginx*:
 
-     Configure Nginx to serve the static files and proxy API requests to Django. Example configuration:
-
-     nginx
-     server {
-         listen 80;
-         server_name your_domain_or_ip;
-
-         location / {
-             root /path/to/your/repo/frontend/build;
-             try_files $uri /index.html;
-         }
-
-         location /api/ {
-             proxy_pass http://127.0.0.1:8000;
-             proxy_set_header Host $host;
-             proxy_set_header X-Real-IP $remote_addr;
-             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-             proxy_set_header X-Forwarded-Proto $scheme;
-         }
-     }
-     
-
-4. *Set Up SSL (Optional but Recommended)*
-
-   Secure your application by setting up SSL using a service like Let’s Encrypt.
-
-5. *Monitor and Maintain*
-
-   - Use process managers like supervisord or systemd to manage the Gunicorn service.
-   - Regularly update dependencies and monitor logs for any issues.

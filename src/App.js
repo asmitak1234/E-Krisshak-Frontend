@@ -14,23 +14,6 @@ import { Button } from 'react-bootstrap';
 import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
 import SideBar from "./Components/SideBar";
 
-// export default function App() {
-//   return (
-//     <>
-    
-//     <BrowserRouter>
-//       <Navigation />
-//       <Routes>
-//         <Route path="/" element={<Home/>}/>
-//         <Route path="/krisshaks" element={<Krisshaks/>}/>
-//         <Route path="/manage" element={<Manage/>}/>
-//       </Routes>
-//       <Footer/>
-//     </BrowserRouter>
-//     </>
-//   );
-// }
-
 function Logout() {
   localStorage.clear();
   return <Navigate to="/login" />;
@@ -44,19 +27,19 @@ function RegisterAndLogout() {
 function App() {
   // Define form content for Home page
   const formContentHome = {
-    content: <Button type="submit" variant="light">Log out</Button>,
+    content: <Button type="submit" variant="primary" className="btn-lg mt-2">Log out</Button>,
     onSubmit: Logout,
   };
 
   // Define form content for Login page
   const formContentLogin = {
-    content: <Button variant="light" onClick={() => window.location.href = '/register'}>Register</Button>,
+    content: <Button variant="primary" className="btn-lg mt-2" onClick={() => window.location.href = '/register'}>Register</Button>,
     onSubmit: () => {},
   };
 
   // Define form content for Register page
   const formContentRegister = {
-    content: <Button variant="light" onClick={() => window.location.href = '/login'}>Login</Button>,
+    content: <Button variant="primary" className="btn-lg mt-2" onClick={() => window.location.href = '/login'}>Login</Button>,
     onSubmit: () => {},
   };
 
@@ -120,3 +103,21 @@ function App() {
 }
 
 export default App;
+
+
+// export default function App() {
+//   return (
+//     <>
+    
+//     <BrowserRouter>
+//       <Navigation />
+//       <Routes>
+//         <Route path="/" element={<Home/>}/>
+//         <Route path="/krisshaks" element={<Krisshaks/>}/>
+//         <Route path="/manage" element={<Manage/>}/>
+//       </Routes>
+//       <Footer/>
+//     </BrowserRouter>
+//     </>
+//   );
+// }
