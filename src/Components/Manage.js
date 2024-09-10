@@ -62,7 +62,7 @@ export default function Manage(){
        let EditModalClose=()=>setEditModalShow(false);
    
     return(
-        <div className='row side-row my-4 mx-2'>
+        <div className='row side-row my-4 mx-3'>
         <Table striped bordered hover>
         <thead>
           <tr>
