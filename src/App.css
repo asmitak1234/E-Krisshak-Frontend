@@ -17,20 +17,19 @@ body ,html{
   }
 
 .navbar {
-    width: 300vw;
+    width: 100vw;
   }
-
+  
 .sidebar{
     display: flex;
     height: 100vh;
     width: 20vw;
     float: left;
     overflow: scroll initial;
-    z-index: 1000;
 }
 
 .side-row{
-    padding: 10px;
+    padding: 30px;
 }
 
 .slides{

@@ -17,17 +17,17 @@ export default function SideBar()
 
         <div className="sidebar">
         <CDBSidebar backgroundColor="#333">
-        <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>Navigation</CDBSidebarHeader>
+        <CDBSidebarHeader prefix={<i className="fa fa-bars"/>}>Navigation</CDBSidebarHeader>
         <CDBSidebarContent>
         <CDBSidebarMenu>
             <Link to='/' activeclassname='activeClicked'>
             <CDBSidebarMenuItem icon="home">Home</CDBSidebarMenuItem>
             </Link>
             <Link to='/krisshaks' activeclassname='activeClicked'>
-            <CDBSidebarMenuItem icon="list">E-Krisshak List</CDBSidebarMenuItem>
+            <CDBSidebarMenuItem icon="list">List</CDBSidebarMenuItem>
             </Link>
             <Link to='/manage' activeclassname='activeClicked'>  
-            <CDBSidebarMenuItem icon="user" iconType="solid">Manage Krisshaks
+            <CDBSidebarMenuItem icon="user" iconType="solid">Manage
             </CDBSidebarMenuItem>
             </Link>
         </CDBSidebarMenu>
