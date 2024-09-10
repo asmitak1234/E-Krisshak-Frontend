@@ -15,7 +15,7 @@ import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
 import SideBar from "./Components/SideBar";
 
 function Logout() {
-  localStorage.removeItem('token');
+  // localStorage.removeItem('token');
   localStorage.clear();
   return <Navigate to="/login" />;
 }
