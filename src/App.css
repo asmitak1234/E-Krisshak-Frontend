@@ -24,11 +24,16 @@ body ,html{
     display: flex;
     height: 100vh;
     width: 20vw;
+    transition: width 0.3s;
     float: left;
     /* overflow-y: scroll; */
     /* overflow: auto; */
 }
-
+  
+  .sidebar.expanded {
+    width: 50px; /* Adjust width as needed */
+  }
+  
 .side-row{
     padding: 30px;
 }

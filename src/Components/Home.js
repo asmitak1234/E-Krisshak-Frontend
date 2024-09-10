@@ -33,8 +33,8 @@ const getUser = () => {
 
   return (
     <>
-    <h3 className="text-center my-2">
-                    Welcome, {username}! &#128522;
+    <h3 className="text-center my-2 mx-1">
+                    Welcome, {username}!&#128522;
     </h3>
     <div className='row slides'>
         <Carousel data-bs-theme="dark">

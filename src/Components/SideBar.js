@@ -8,6 +8,7 @@ import {
   CDBSidebarMenuItem,
   CDBSidebarContent,
   CDBSidebarMenu,
+  CDBIcon,
 } from 'cdbreact';
 import { Link } from "react-router-dom";
 
@@ -16,8 +17,8 @@ export default function SideBar()
     return(
 
         <div className="sidebar">
-        <CDBSidebar backgroundColor="#333">
-        <CDBSidebarHeader prefix={<i className="fa fa-bars"/>}>Navigation</CDBSidebarHeader>
+        <CDBSidebar backgroundColor="#333"className="collapsed" toggled>
+        <CDBSidebarHeader prefix={<CDBIcon icon="bars" size="lg" />}>Navigation</CDBSidebarHeader>
         <CDBSidebarContent>
         <CDBSidebarMenu>
             <Link to='/' activeclassname='activeClicked'>
