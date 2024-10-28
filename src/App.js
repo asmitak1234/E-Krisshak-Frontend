@@ -13,12 +13,35 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
 import SideBar from "./Components/SideBar";
+import { useEffect, useState } from 'react';
+
+// function Logout() {
+//   // localStorage.removeItem('token');
+//   localStorage.clear();
+//   return <Navigate to="/login" />;
+// }
 
 function Logout() {
-  // localStorage.removeItem('token');
-  localStorage.clear();
-  return <Navigate to="/login" />;
+  const [shouldNavigate, setShouldNavigate] = useState(false);
+
+  useEffect(() => {
+    const confirmLogout = window.confirm("Are you sure you want to log out?");
+    
+    if (confirmLogout) {
+      localStorage.clear();
+      setShouldNavigate(true); // Set state to trigger navigation
+    }
+  }, []);
+
+  // If confirmed, navigate to login
+  if (shouldNavigate) {
+    return <Navigate to="/login" />;
+  }
+
+  // Return null while waiting for confirmation
+  return null;
 }
+
 
 function RegisterAndLogout() {
   localStorage.clear();
