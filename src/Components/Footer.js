@@ -9,10 +9,10 @@ import { CDBModalFooter,CDBBox} from 'cdbreact';
 export default function Footer(){
   return (
     <CDBModalFooter className="shadow mx-auto px-4" style={{ height:"15vh", borderRadius:"10px",
-      position: "relative",
-      bottom: "10px",
-      left: "40%",
-      width:"70vw",
+      position: "absolute",
+      bottom: "2%",
+      left: "50vw",
+      width:"70%",
       transform: "translateX(-50%)",}} >
       <CDBBox
         display="flex"
@@ -31,7 +31,7 @@ export default function Footer(){
             {/* <span className="ms-4 h5 mb-0 font-weight-bold"></span> */}
           </div>
           <strong style={{fontSize:'23px'}} className="mx-1">E-Krisshak</strong>
-          <p className="mx-3 my-2"> by Asmita Kumari</p>
+          <p className="mx-2 my-2"> by Asmita Kumari</p>
         </CDBBox>
       </CDBBox>
     </CDBModalFooter>

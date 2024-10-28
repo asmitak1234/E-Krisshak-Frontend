@@ -13,7 +13,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
 import SideBar from "./Components/SideBar";
-import { useEffect, useState } from 'react';
 
 // function Logout() {
 //   // localStorage.removeItem('token');
@@ -40,19 +39,19 @@ function RegisterAndLogout() {
 function App() {
   // Define form content for Home page
   const formContentHome = {
-    content: <Button type="submit" variant="primary" className="btn-lg mt-2">Log out</Button>,
+    content: <Button className="btn-lg mt-2" style={{ border: '3px inset white',backgroundColor:'rgba(88, 85, 85, 0.514)',color:'white' }}>Log out</Button>,
     onSubmit: Logout,
   };
 
   // Define form content for Login page
   const formContentLogin = {
-    content: <Button variant="primary" className="btn-lg mt-2" onClick={() => window.location.href = '/register'}>Register</Button>,
+    content: <Button className="btn-lg mt-2" style={{ border: '3px inset white',backgroundColor:'rgba(88, 85, 85, 0.514)',color:'white' }} onClick={() => window.location.href = '/register'}>Register</Button>,
     onSubmit: () => {},
   };
 
   // Define form content for Register page
   const formContentRegister = {
-    content: <Button variant="primary" className="btn-lg mt-2" onClick={() => window.location.href = '/login'}>Login</Button>,
+    content: <Button className="btn-lg mt-2" style={{ border: '3px inset white',backgroundColor:'rgba(88, 85, 85, 0.514)',color:'white' }} onClick={() => window.location.href = '/login'}>Login</Button>,
     onSubmit: () => {},
   };
 
