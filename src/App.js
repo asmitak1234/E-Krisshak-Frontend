@@ -22,21 +22,15 @@ import { useEffect, useState } from 'react';
 // }
 
 function Logout() {
-  const [shouldNavigate, setShouldNavigate] = useState(false);
-
   useEffect(() => {
     const confirmLogout = window.confirm("Are you sure you want to log out?");
     
     if (confirmLogout) {
       localStorage.clear();
-      setShouldNavigate(true); // Set state to trigger navigation
+      // Redirect to login after logout
+      window.location.href = "/login"; // or use <Navigate to="/login" /> if preferred
     }
   }, []);
-
-  // If confirmed, navigate to login
-  if (shouldNavigate) {
-    return <Navigate to="/login" />;
-  }
 
   // Return null while waiting for confirmation
   return null;
