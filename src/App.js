@@ -39,7 +39,7 @@ function RegisterAndLogout() {
 function App() {
   // Define form content for Home page
   const formContentHome = {
-    content: <Button className="btn-lg mt-2" style={{ border: '3px inset white',backgroundColor:'rgba(88, 85, 85, 0.514)',color:'white' }}>Log out</Button>,
+    content: <Button type="submit" className="btn-lg mt-2" style={{ border: '3px inset white',backgroundColor:'rgba(88, 85, 85, 0.514)',color:'white' }}>Log out</Button>,
     onSubmit: Logout,
   };
 

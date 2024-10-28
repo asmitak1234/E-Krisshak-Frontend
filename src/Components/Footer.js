@@ -8,12 +8,15 @@ import { CDBModalFooter,CDBBox} from 'cdbreact';
 
 export default function Footer(){
   return (
-    <CDBModalFooter className="shadow mx-auto px-4" style={{ height:"15vh", borderRadius:"10px",
-      position: "absolute",
-      bottom: "2%",
-      left: "50vw",
-      width:"70%",
-      transform: "translateX(-50%)",}} >
+    <CDBModalFooter className="shadow px-4" style={{ height:"15vh", borderRadius:"10px",
+      position: "relative",
+      marginTop:"40vh",
+      bottom: 0,
+      left: "40vw",
+      width:"60%",
+      transform: "translateX(-50%)",
+      zIndex:1000,
+      }} >
       <CDBBox
         display="flex"
         justifyContent="between"

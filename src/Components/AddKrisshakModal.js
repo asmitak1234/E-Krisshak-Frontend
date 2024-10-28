@@ -13,6 +13,7 @@ export default function AddKrisshakModal(props){
         .then((result)=>{
             alert(result);
             props.setUpdated(true);
+            props.onHide(); // Close the modal on successful addition
         },
         (error)=>{
             alert("Failed to Add Krisshak");

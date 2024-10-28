@@ -44,10 +44,11 @@ export default function Manage(){
            setAddModalShow(true);
        };
    
-       const handleDelete = (e, krisshakId) => {
-           if(window.confirm('Are you sure ?')){
+       const handleDelete = (e, krisshak) => {
+            const email = krisshak.Email; // Get the email of the Krisshak to be deleted
+           if(window.confirm(`Are you Sure you want to delete Krisshak with email ID: ${email} ?`)){
                e.preventDefault();
-               deleteKrisshak(krisshakId)
+               deleteKrisshak(krisshak.krisshakId)
                .then(()=>{
                    alert("Krisshak Deleted Successfully");
                    setIsUpdated(true);
@@ -94,7 +95,7 @@ export default function Manage(){
                     <td>{kri.HighestEducation}</td>
                     <td>
                         <Button className='mr-2 my-1' variant='danger'
-                         onClick={event => handleDelete(event,kri.krisshakId)}><RiDeleteBin5Line/>
+                         onClick={event => handleDelete(event,kri)}><RiDeleteBin5Line/>
                         </Button>
                         <span>&nbsp;&nbsp;&nbsp;</span>
                         <Button className="mr-2 my-1"
